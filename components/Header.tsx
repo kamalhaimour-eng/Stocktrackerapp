@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
-import NavItems from "./NavItems"
+import NavItems from "@/components/NavItems"
+import { UserDropdown } from "./UserDropdown"
 
 const Header = () => {
   return (
@@ -8,12 +9,13 @@ const Header = () => {
 
         <div className='container header-wrapper'>
             <Link href="/">
-                <Image  src="/assets/KamalsLogo.png" alt="tracker logo" width={300} height={160} className="h-15 w-auto cursor-pointer"></Image>
+                <Image  src="/assets/kamalslogo2.png" alt="tracker logo"  loading="eager" width={300} height={160} className="h-15 w-auto cursor-pointer"></Image>
             </Link>
             <nav className="hidden sm:block">
                 <NavItems />
             </nav>
-        {/* UserDropdown */}
+            <UserDropdown/>
+        
         </div>
     </header>
   )
