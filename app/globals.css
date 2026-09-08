@@ -137,19 +137,24 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-gray-900 text-foreground;
+    @apply overflow-y-hidden bg-gray-900 text-foreground;
   }
 }
 
 @layer utilities {
-
-  .leftsword{
-    @apply absolute transition-transform duration-500 ease-in-out h-17 w-17  group-hover:group-hover:-translate-x-2 group-hover:-translate-y-2;
+  .leftsword,
+  .rightsword {
+    @apply absolute h-14 w-14 transition-transform duration-500 ease-in-out;
   }
 
-  .rightsword{
-    @apply  absolute transition-transform duration-500 ease-in-out h-17 w-17  group-hover:group-hover:translate-x-2 group-hover:-translate-y-2;
+  .open:hover .leftsword {
+    @apply -translate-x-2 -translate-y-2;
   }
+
+  .open:hover .rightsword {
+    @apply translate-x-2 -translate-y-2;
+  }
+
   .container {
     @apply mx-auto max-w-screen-2xl px-4 md:px-6 lg:px-8;
   }
@@ -166,7 +171,7 @@
     @apply z-50 w-full h-[70px] bg-gray-800;
   }
   .header-wrapper {
-    @apply flex justify-between items-center px-6 py-4 text-gray-500;
+    @apply flex justify-between h-20 items-center px-6 py-4 text-gray-500;
   }
   .auth-layout {
     @apply flex flex-col justify-between lg:flex-row h-screen bg-gray-900 relative overflow-hidden;

@@ -6,7 +6,7 @@ import { UserDropdown } from "./UserDropdown"
 const Header = () => {
   return (
     <header className = "sticky top-0 header" >
-
+ 
         <div className='container header-wrapper'>
             <Link href="/">
                 <Image  src="/assets/kamalslogo2.png" alt="tracker logo"  loading="eager" width={300} height={160} className="h-15 w-auto cursor-pointer"></Image>

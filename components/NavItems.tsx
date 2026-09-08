@@ -23,7 +23,7 @@ const NavItems = () => {
         {/* Map goes through every item in the array and gives each li a key eqaul to the href provided */}
        {NAV_ITEMS.map( ({href,label}) =>(
             <li key={href}>
-                <Link href={href} className={`hover:text-[#1c39bb]/90 transition-colors ${isActive(href) ? 
+                <Link href={href} className={`hover:text-yellow-500 transition-colors ${isActive(href) ? 
                   'text-gray-100': ''}`}>
                   {label}
 
